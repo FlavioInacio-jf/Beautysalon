@@ -15,6 +15,8 @@
     <!--STYLES-->
     <link rel="stylesheet" href="css/styles.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <title>Beautysalon</title>
   </head>
   <body>
@@ -110,21 +112,74 @@
         </div>
       </section>
 
-      <section id="testimonials" class="section">
-        <blockquote>
-          <p>
-            "Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.   "
-          </p>
-          <footer>
-            <img src="">
-            <cite>Wanessa Souza</cite>
-          </footer>
+      <div class="divider-1"></div>
 
-        </blockquote>
+      <section id="testimonials" class="section">
+        <div class="container grid swiper-container">
+          <header>
+            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+          </header>
+
+          <div class="testimonials">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>
+                      &ldquo;
+                    </span>
+                    Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.   "
+                  </p>
+                  <cite>
+                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Foto Wanessa souza">
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>
+                      &ldquo;
+                    </span>
+                    Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.   "
+                  </p>
+                  <cite>
+                    <img src="https://randomuser.me/api/portraits/women/74.jpg" alt="Foto Franciele Venega">
+                    Franciele Venega
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>
+                      &ldquo;
+                    </span>
+                    Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.   "
+                  </p>
+                  <cite>
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Foto Valeska Fabris">
+                    Valeska Fabris
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <!--If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
       </section>
 
+      <section class="contact">
+
+      </section>
     </main>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
+
   </body>
 </html>
