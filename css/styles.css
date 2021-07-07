@@ -368,6 +368,15 @@ nav.show div.icon-close {
 #testimonials {
   background: white;
 }
+#testimonials .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+#testimonials  header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
 
 #testimonials blockquote {
   padding: 2rem;
@@ -403,4 +412,47 @@ nav.show div.icon-close {
   height: 2rem;
   object-fit: cover;
   clip-path: circle();
+}
+
+/* swiper */
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+
+/*====  CONTACT  ============================*/
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button i ,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: var(--base-color);
 }
