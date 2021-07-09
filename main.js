@@ -18,17 +18,17 @@ links.forEach(link => {
 
 // for (const element of toggle)
 
-const header = document.querySelector('#header');
-const navHeight = header.offsetHeight;
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header');
+  const navHeight = header.offsetHeight;
 
-window.addEventListener('scroll', () => {
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   }
   else {
     header.classList.remove('scroll')
   }
-})
+}
 
 /* Testemonial corrusel*/
 
@@ -56,9 +56,31 @@ scrollReveal.reveal(`
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links
+  #contact .text, #contact .links,
+  footer .logo, footer
   `,
   {
     interval: 100
   }
 )
+
+
+/* Back top top */
+
+
+function backToTop() {
+  const backToTopButton = document.querySelector(".back-top-top");
+  if (window.scrollY > 200) {
+    backToTopButton.classList.add('show')
+  }
+  else {
+    backToTopButton.classList.remove("show")
+  }
+}
+
+
+
+window.addEventListener('scroll', () => {
+  changeHeaderWhenScroll();
+  backToTop();
+})
