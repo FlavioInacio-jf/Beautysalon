@@ -40,6 +40,12 @@ ul {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  --header-height: 4.5rem;
+  /*Font size*/
+  --subtitle-font-size: 1rem;
+  --title-font: "Poppins", sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 /*====  BASE  ============================*/
@@ -49,14 +55,14 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background-color: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 1.875rem "Poppins", sans-serif;
+  font: 700 1.875rem var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -70,7 +76,7 @@ body {
   display: inline-flex;
   align-items: center;
 
-  font-weight: 500 1rem 'DM Sans', sans-serif;
+  font-weight: 500 1rem var(--body-font);
 
   transition: background 0.3s;
 }
@@ -111,14 +117,9 @@ body {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
-main {
-  margin-top: calc(4.5rem + 2rem);
-}
-
-
 /*====  LOGO  ============================*/
 .brand {
-  font: 700 1.31rem "Poppins", sans-serif;
+  font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
 .brand span {
@@ -240,11 +241,15 @@ nav.show div.icon-close {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 .section .title {
   margin-bottom: 1rem;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -468,6 +473,10 @@ footer {
   background: var(--base-color);
 }
 
+footer.section {
+  padding: 4rem 0;
+}
+
 footer .brand {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -481,7 +490,7 @@ footer .logo div {
 
 footer .social {
   display: flex;
-  gap: 2.47rem;
+  gap: 2rem;
 }
 
 footer .social a {
@@ -531,10 +540,107 @@ footer .social a:hover {
 /* extra large devices: 1200 >*/
 @media (min-width: 1200px) {
 
+  /*reusable classes*/
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  .button {
+    height: 3.125rem;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+  }
+
+
+  nav .toggle {
+    display: none;
+  }
+
+
+  /*HOME*/
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /*layout*/
+  main {
+    margin-top: 2rem;
+  }
+
+
+  #home .container {
+    grid-auto-flow: column;
+    width: fit-content;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  /* about */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+
+  }
+
+  /* Serviçes */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* Testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
 }
 /* large devices: 1023 > */
 /* large  devices: 992 > */
 @media (min-width: 992px) {
-
+  :root {
+    --subtitle-font-size: 1.125rem;
+  }
 }
 /* medium  devices: 767 > */
