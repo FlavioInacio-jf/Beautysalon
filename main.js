@@ -84,9 +84,34 @@ function backToTop() {
   }
 }
 
+/* Menu ativo conforme a seção visivel na página */
+
+const sections = document.querySelectorAll('section[id]');
+function activateMenuAtCurrentSection() {
+
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+
+    const checkpointStart = checkpoint >= sectionTop;
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight;
+
+    if (checkpointStart && checkpointEnd) {
+      document.querySelector('nav ul li a[href*=' + sectionId + '] ').classList.add("active")
+    }
+    else {
+      document.querySelector('nav ul li a[href*=' + sectionId + '] ').classList.remove("active")
+    }
+  })
+}
+
 
 
 window.addEventListener('scroll', () => {
   changeHeaderWhenScroll();
   backToTop();
+  activateMenuAtCurrentSection();
 })
