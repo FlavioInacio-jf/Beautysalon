@@ -1,6 +1,3 @@
-# beautysalon
- Projeto criado durante a NLW 6 da RocketSeat
-
 <h1 align="center">
 	<a data-flickr-embed="true" href="https://www.flickr.com/photos/193310286@N05/51321284144/in/dateposted-public/" title="print"><img 		src="https://live.staticflickr.com/65535/51321284144_21d32d892b_z.jpg" width="640" height="336" alt="print"></a>
 	
@@ -42,6 +39,9 @@ O projeto beautysalon foi desenvolvido durante a NLW 6 da RocketSeat. A aplicaç
 ## ⚙️ Funcionalidades
 
 - Alterar as cores
+- Rensponsivo
+- Bonito
+- Cores constumizavel
 ---
 
 
