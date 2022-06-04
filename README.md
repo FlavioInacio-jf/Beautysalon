@@ -60,10 +60,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ```bash
 
 # Clone este repositório
-$ git clone https://github.com/FlavioInacio-jf/beautysalon
+$ git clone https://github.com/FlavioInacio-jf/Beautysalon
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd beautysalon
+$ cd Beautysalon
 
 # Abra o arquivo index.html(http://localhost:3000)
 
